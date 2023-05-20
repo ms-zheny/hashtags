@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "Hash Tag Extension",
+    "version": "2.0",
+    "description": "Inserts selected text into the cursor position.",
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_icon": "icons/icon16.png",
+      "default_title": "Insert Text",
+      "default_popup": "popup.html"
+    },
+    "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://successcentre.crm.dynamics.com/*"],
+            "runAt" : "document_idle",
+            "all_frames": false,
+            "js": ["content.js"]
+        }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["content.js"],
+        "matches": ["https://successcentre.crm.dynamics.com/*"]
+      }
+    ]
+  }
+  
