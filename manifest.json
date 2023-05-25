@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Hash Tag Extension",
-    "version": "2.0",
+    "version": "2.1",
     "description": "Inserts selected text into the cursor position.",
     "background": {
       "service_worker": "background.js"
